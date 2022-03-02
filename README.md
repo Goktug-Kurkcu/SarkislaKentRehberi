@@ -36,14 +36,14 @@ Sivas ili - Şarkışla ilçesi için hazırlanan Şarkışla Kent Rehberi Proto
 
 ## İlerleyen çalışmalarda giderilecek olan eksiklikler
 
-*Çalışma, prototip üretim olup projede bulunacak olan temel uygulamaları göstermektedir. Sorgu ve Taşınmaz No(ya da mahalle-ada/parsel) araamaları, buffer analizi, rota hesaplama araçları pasif bulunmaktadır.
+* Çalışma, prototip üretim olup projede bulunacak olan temel uygulamaları göstermektedir. Sorgu ve Taşınmaz No(ya da mahalle-ada/parsel) araamaları, buffer analizi, rota hesaplama araçları pasif bulunmaktadır.
 
-*Çalışma responsive bir yapıda olup, mobil cihazlarda bir miktar görüntü kalitesinde düşmesi gözlemlenmiştir. İleride yapılacak çalışmalarda güncel WEB tasarım teknolojilerinin kullanılması ile bu bozulmaların giderilmesi hedeflenmektedir.
+* Çalışma responsive bir yapıda olup, mobil cihazlarda bir miktar görüntü kalitesinde düşmesi gözlemlenmiştir. İleride yapılacak çalışmalarda güncel WEB tasarım teknolojilerinin kullanılması ile bu bozulmaların giderilmesi hedeflenmektedir.
 
-*Çalışma fark edileceği üzere çalışma sayfası statik yapıda olup, veriler GeoJSON dosyalardan okunmaktadır. Çalışmanın dinamik bir yapıya bürünebilmesi için PostgreSQL-PostGIS eklentisi ve backend programlaması için Python Django kullanılması hedeflenmektedir.
+* Çalışma fark edileceği üzere çalışma sayfası statik yapıda olup, veriler GeoJSON dosyalardan okunmaktadır. Çalışmanın dinamik bir yapıya bürünebilmesi için PostgreSQL-PostGIS eklentisi ve backend programlaması için Python Django kullanılması hedeflenmektedir.
 
 # ÖNEMLİ BİLGİLENDİRME
-*Sayfa; VS Code üzerinde açılmaya çalışıldığı zaman harita tabakaları kullanılamamakta olup, VS Code - Live Server - eklentisinin kullanılması halinde herhangi bir sorun yaşanmamaktadır.
+* Sayfa; VS Code üzerinde açılmaya çalışıldığı zaman harita tabakaları kullanılamamakta olup, VS Code - Live Server - eklentisinin kullanılması halinde herhangi bir sorun yaşanmamaktadır.
 
 ## Yazar
 Göktuğ KÜRKÇÜ
