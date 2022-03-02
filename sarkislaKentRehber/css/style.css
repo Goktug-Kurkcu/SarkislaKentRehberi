@@ -1,0 +1,197 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    #head {
+        width: 100%;
+        height: 4vh;
+        background-color: #337ab7;
+    }
+    
+    #head nav ul {
+        list-style: none;
+        margin-top: .25%;
+        margin-left: 15%;
+    }
+    
+    #head nav li {
+        display: inline-block;
+    }
+    
+    #logo #lg1 {
+        display: none;
+    }
+    
+    #head nav img:hover {
+        box-shadow: 0 0 1px 2px;
+    }
+    
+    #head #filterIMG,
+    #head #searchIMG {
+        display: none;
+    }
+    
+    #leftPanel {
+        width: 15%;
+        height: 96vh;
+        background-color: #337ab7;
+    }
+    
+    #leftPanel #logo {
+        padding-left: 25px;
+    }
+    
+    #leftPanel .title h3 {
+        padding-top: 25px;
+        padding-left: 25px;
+        color: #ffffff;
+    }
+    
+    #leftPanel #filter .checkbox {
+        padding-top: 25px;
+        padding-left: 25px;
+    }
+    
+    #leftPanel #filter .checkbox p {
+        color: #ffffff;
+        font-weight: bold;
+    }
+    
+    #leftPanel #filter .checkbox label {
+        color: #ffffff;
+    }
+    
+    #leftPanel #filter .checkbox .btn_ul {
+        margin-top: 10px;
+        padding: 5px 10px;
+        border-radius: 25px;
+    }
+    
+    #leftPanel #search .searchForm .inp {
+        margin-top: 5px;
+        margin-left: 25px;
+        width: 150px;
+        height: 30px;
+        border-radius: 10px;
+    }
+    
+    #leftPanel #search .searchForm .btn_ul {
+        margin-top: 5px;
+        margin-left: 25px;
+        padding: 5px 10px;
+        border-radius: 25px;
+    }
+    
+    #map {
+        width: 85%;
+        height: 96vh;
+    }
+    
+    @media only screen and (max-height: 850px) {
+        #head #searchIMG {
+            display: block;
+        }
+        #search {
+            display: none;
+        }
+    }
+    
+    @media only screen and (max-height: 750px) {
+        #head #searchIMG {
+            display: block;
+        }
+        #head img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    @media only screen and (max-height: 590px) {
+        #lg1 {
+            display: block;
+        }
+        #lg2 {
+            display: none;
+        }
+        #head #filterIMG,
+        #head #searchIMG {
+            display: block;
+        }
+        #filter {
+            display: none;
+        }
+    }
+    
+    @media only screen and (max-width: 1480px) {
+        #logo img {
+            width: 150px;
+        }
+        #search .searchForm .inp {
+            width: 125px !important;
+        }
+    }
+    
+    @media only screen and (max-width: 1180px) {
+        #lg2 {
+            display: block;
+        }
+        #lg2 img {
+            width: 100px;
+        }
+        #filter p {
+            font-size: 14px;
+        }
+        #filter label {
+            font-size: 12px;
+        }
+        #search .searchForm .inp {
+            width: 100px !important;
+        }
+    }
+    
+    @media only screen and (max-width: 912px) {
+        #head #filterIMG,
+        #head #searchIMG {
+            display: block;
+        }
+        #lg1 {
+            padding-top: 25px;
+            display: block !important;
+        }
+        #lg1 img {
+            width: 75px;
+        }
+        #lg2 {
+            display: none;
+        }
+        #filter {
+            display: none;
+        }
+        #search {
+            display: none;
+        }
+    }
+    
+    @media only screen and (max-width: 550px) {
+        #head #filterIMG,
+        #head #searchIMG {
+            display: block;
+        }
+        #leftPanel {
+            display: none;
+        }
+        #map {
+            width: 100%;
+        }
+    }

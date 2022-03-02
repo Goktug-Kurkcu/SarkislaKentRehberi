@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+    <!-- Leaflet Control Geocoder -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+    <!-- Plugin-1 AJAX => None -->
+
+    <!-- Plugin-2 Leaflet Mouse Position CSS -->
+    <link rel="stylesheet" href="./plugins/Leaflet.MousePosition-master/Leaflet.MousePosition-master/src/L.Control.MousePosition.css">
+
+    <!-- Plugin-3 Leaflet Polyline Measure CSS -->
+    <link rel="stylesheet" href="./plugins/Leaflet.PolylineMeasure-master/Leaflet.PolylineMeasure-master/Leaflet.PolylineMeasure.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Şarkışla Kent Rehberi</title>
+    <link rel="icon" href="./icon/logoSarkisla.png">
+</head>
+
+<body>
+    <!-- Technical Processes -->
+    <header id="head">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" title="Gezin"><img src="./icon/point.png" alt="" width="25px" height="25px"></a>
+                </li>
+                <li>
+                    <a href="#" title="Çizim Yap"><img src="./icon/roller-pen.png" alt="" width="25px" height="25px"></a>
+                </li>
+                <li>
+                    <a href="" title="Rota Bul"><img src="./icon/navigation.png" alt="" width="25px" height="25px"></a>
+                </li>
+                <li>
+                    <a href="" title="Çevre - Buffer Analizi Yap"><img src="./icon/buffer.png" alt="" width="25px" height="25px"></a>
+                </li>
+                <li>
+                    <a id="searchIMG" href="" onclick="searchBTN_func()"><img src="./icon/magnifying-glass.png" alt="" width="25px" height="25px"></a>
+                </li>
+                <li>
+                    <a id="filterIMG" href="" onclick="filterBTN_func()"><img src="./icon/filter.png" alt="" width="25px" height="25px"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- LeftPanel -->
+    <div id="leftPanel">
+
+        <!-- Logo -->
+        <div id="logo">
+            <a id="lg1" href="sarkisla.bel.tr" target="_blank"><img src="./icon/logoSarkisla.png" alt=""></a>
+            <a id="lg2" href="sarkisla.bel.tr" target="_blank"><img src="./icon/belediyeLogo.png" alt=""></a>
+        </div>
+
+        <!-- Filter -->
+        <div id="filter">
+            <div class="title">
+                <h3>Filtrele</h3>
+            </div>
+
+            <!-- Checkboxs -->
+            <div class="checkbox">
+                <form action="">
+                    <p>Kamusal Alanlar</p>
+                    <input type="checkbox" id="cityHall" name="marker" value="Belediye">
+                    <label for="cityHall">Belediye</label><br>
+                    <input type="checkbox" id="egm" name="marker" value="EGM">
+                    <label for="egm">EGM</label><br>
+                    <input type="checkbox" id="tsk" name="marker" value="TSK">
+                    <label for="tsk"> TSK</label><br>
+                    <input type="checkbox" id="saglik" name="marker" value="Hastane">
+                    <label for="saglik">Hastane</label><br>
+                    <input type="checkbox" id="saglik2" name="marker" value="Eczane">
+                    <label for="saglik2">Eczane</label><br>
+                    <input type="checkbox" id="meb" name="marker" value="Eğitim Alanı">
+                    <label for="meb">Okul</label><br>
+                    <input type="checkbox" id="dini" name="marker" value="Dini Tesis">
+                    <label for="dini">Cami</label><br>
+                    <input type="checkbox" id="otel" name="marker" value="Otel">
+                    <label for="otel">Otel</label><br>
+                    <input type="checkbox" id="yurtApart" name="marker" value="Yurt">
+                    <label for="yurtApart">Yurtlar</label><br>
+                    <input type="checkbox" id="ogretmenevi" name="marker" value="Öğretmenevi">
+                    <label for="ogretmenevi">Öğretmenevi</label><br><br>
+
+                    <p>Eğlence</p>
+                    <input type="checkbox" id="park" name="marker" value="Park">
+                    <label for="park">Park</label><br>
+                    <input type="checkbox" id="spor" name="marker" value="Spor Tesisi">
+                    <label for="spor">Spor Tesisi</label><br>
+                    <input type="checkbox" id="avm" name="marker" value="Avm">
+                    <label for="avm">AVM</label><br>
+                    <input type="checkbox" id="kulturel" name="marker" value="Kulturel">
+                    <label for="kulturel">Kültürel Tesisler</label><br><br>
+
+                    <p>Şahıs</p>
+                    <input type="checkbox" id="arsa" name="marker" value="Arsa">
+                    <label for="arsa">Arsa</label><br>
+                    <input type="checkbox" id="konut" name="marker" value="Konut">
+                    <label for="konut">Konut</label><br>
+
+                    <input class="btn_ul" type="submit" value="Filtrele">
+                    <input class="btn_ul" type="reset" value="Sıfırla">
+                </form>
+            </div>
+        </div>
+
+        <!-- Search -->
+        <div id="search">
+            <!-- Title Search -->
+            <div class="title">
+                <h3>Parsel Ara</h3>
+            </div>
+            <!-- Search Form-->
+            <form action="#" class="searchForm">
+                <input class="inp" type="text" id="neigh" name="neigh" placeholder="Mahalle:"><br>
+                <input class="inp" type="text" id="tasinmazNo" name="tasinmazNo" placeholder="Taşınmaz No:"><br>
+                <input class="inp" type="text" id="block" name="block" placeholder="Ada No"><br>
+                <input class="inp" type="text" id="parcel" name="parcel" placeholder="Parsel No"><br>
+                <input class="btn_ul" type="submit" value="Taşınmaz Bul">
+                <input class="btn_ul" type="reset" value="Sıfırla">
+            </form>
+        </div>
+    </div>
+
+    <!-- Map  -->
+    <div id="map"></div>
+
+    <!-- Leaflet Script -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <!-- Leaflet Control Geocoder Script -->
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+    <!-- Plugin-1 Ajax -->
+    <script src="./plugins/leaflet-ajax-gh-pages/leaflet-ajax-gh-pages/dist/leaflet.ajax.min.js"></script>
+
+    <!-- Plugin-2 Mouse Position -->
+    <script src="./plugins/Leaflet.MousePosition-master/Leaflet.MousePosition-master/src/L.Control.MousePosition.js"></script>
+
+    <!-- Plugin-3 Polyline Measure -->
+    <script src="./plugins/Leaflet.PolylineMeasure-master/Leaflet.PolylineMeasure-master/Leaflet.PolylineMeasure.js"></script>
+
+    <!-- Tool-1 Turf.js -->
+    <script src='https://unpkg.com/@@turf/turf/turf.min.js'></script>
+
+    <!-- My Map Script -->
+    <script src="./js/map.js"></script>
+
+</body>
+
+</html>
