@@ -46,7 +46,7 @@ Sivas ili - Şarkışla ilçesi için hazırlanan Şarkışla Kent Rehberi Proto
 * Sayfa; VS Code üzerinde açılmaya çalışıldığı zaman harita tabakaları kullanılamamakta olup, VS Code - Live Server - eklentisinin kullanılması halinde herhangi bir sorun yaşanmamaktadır.
 
 ## Yazar
-Göktuğ KÜRKÇÜ
+Göktuğ KÜRKÇÜ <br>
 Harita Mühendisi
 ## İletişim için;
 hmgoktugkurkcu34@gmail.com
