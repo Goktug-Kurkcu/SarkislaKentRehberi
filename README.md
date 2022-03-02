@@ -16,6 +16,7 @@ Sivas ili - Şarkışla ilçesi için hazırlanan Şarkışla Kent Rehberi Proto
 ## Mahalle Sınır
 - Gültekin Mahallesine Ait Sınırlar (İlçe merkezi sınırları TKGM sitesindeki sorgular ile oluşturulmuş olup, kırsala kayan kısımlar direk çizilmiştir. Yerleşim Bölgesi sınırlarının gösterilmesi amaçlanmış olup projeye geçilmesi halinde veriler düzenlenecektir.)
 ## Kadastro Haritası
+![alt text](https://github.com/Goktug-Kurkcu/SarkislaKentRehberi/blob/main/sarkislaKentRehber/img--SS/kadastroTabaka.png)
 - TKGM parsel sorguda bulunan veriler üzerinden parseller çizilmiş olup, parsellere ait;
   -- İlçe
   -- Mahalle
@@ -29,10 +30,11 @@ Sivas ili - Şarkışla ilçesi için hazırlanan Şarkışla Kent Rehberi Proto
   -- Koordinatlar
   -- Uyarı (Bu kolonun amacı; bazı arsa ya da konut alanlarının üzerinde bulunan okul, hastane gibi yapıların filtrelenmesinde kolaylık sağlanması amacıyla -Nitelik- kolonundaki verilerinin değiştirildiğini göstermek olup, kullanıcıyı TKGM verisinin ne olduğu hakkında bilgilendirmektedir. Örn; Aşık Veysel MYO'nun çalışmada ki -Nitelik- kolonunda --Eğitim Alanı-- yazmakta olup, TKGM'de Arsa olarak geçmektedir. Kullanıcılarımız bu bilgilere UYARI kolonundan ulaşabilir. )
 ## Yol Haritası
+![alt text](https://github.com/Goktug-Kurkcu/SarkislaKentRehberi/blob/main/sarkislaKentRehber/img--SS/yolTabaka.png)
   -- Yol Adı
   -- Yol Uzunluğu
 ## Semboller
-
+![alt text](https://github.com/Goktug-Kurkcu/SarkislaKentRehberi/blob/main/sarkislaKentRehber/img--SS/semboller.png)
 # Ek Bilgiler
 
 ## İlerleyen çalışmalarda giderilecek olan eksiklikler
