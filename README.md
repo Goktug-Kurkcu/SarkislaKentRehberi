@@ -1,4 +1,5 @@
 # SarkislaKentRehberi
+![alt text](https://github.com/Goktug-Kurkcu/SarkislaKentRehberi/blob/main/sarkislaKentRehber/img--SS/genel.png)
 Sivas ili - Şarkışla ilçesi için hazırlanan Şarkışla Kent Rehberi Prototip Çalışması
 
 # Pilot Bölge
